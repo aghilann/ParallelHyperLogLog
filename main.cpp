@@ -50,12 +50,12 @@ int main(int argc, char* argv[]) {
     int actual = testSet.size();
 
     // Output the estimated vs actual distinct count
-    std::cout << "Estimated number of distinct elements: " << estimate << std::endl;
+    std::cout << std::fixed << "Estimated number of distinct elements: " << estimate << std::endl;
     std::cout << "Actual number of distinct elements: " << actual << std::endl;
 
     // Calculate and print the accuracy
     float error = abs(estimate - actual) / static_cast<float>(actual);
-    std::cout << "Error: " << error * 100.0f << "%" << std::endl;
+    std::cout << "Error: " << error << std::endl;
 
     return 0;
 }

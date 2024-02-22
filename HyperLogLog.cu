@@ -112,9 +112,9 @@ void HyperLogLog::add_bulk(uint32_t* hostData, uint32_t size) {
 
     memCopy(this->h_registers, kernelRegisters, this->num_registers, cudaMemcpyDeviceToHost);
 
-    for (uint32_t i = 0; i < this->num_registers; i++) {
-        std::cout << "Bucket " << i << " has value: " << this->h_registers[i] << std::endl;
-    }
+    // for (uint32_t i = 0; i < this->num_registers; i++) {
+        // std::cout << "Bucket " << i << " has value: " << this->h_registers[i] << std::endl;
+    // }
 
     freeGPUMemory(kernelData);
     freeGPUMemory(kernelRank);
